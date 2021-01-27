@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url("/font/Open_Sans/OpenSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: OpenSansB;
+  src: url("/font/Open_Sans/OpenSans-Bold.ttf");
+}
+
+body {
+  background: #fff;
+}
+
+.container-products {
+  width: 1440px;
+  height: 582px;
+  background: #fff;
+  margin: auto;
+}
+
+.container-products .container-title {
+  font-family: OpenSans;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 42px;
+  margin-left: 40px;
+  margin-top: 80px;
+}
+
+.container-products .product-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 328px 328px 328px 328px;
+      grid-template-columns: 328px 328px 328px 328px;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  grid-auto-flow: row;
+  grid-gap: 16px;
+  width: 1360px;
+  margin-left: 40px;
+}
+
+.container-products .product-wrapper .product-link {
+  text-decoration: none;
+  position: relative;
+}
+
+.container-products .product-wrapper .shipping-type {
+  font-family: OpenSans;
+  font-size: 12px;
+  font-weight: 400;
+  position: absolute;
+  background-color: #fff;
+  color: #000;
+  left: 0;
+  padding: 4px 7px 4px 8px;
+  margin-top: 8px;
+  margin-left: 8px;
+  text-align: center;
+  line-height: 20px;
+}
+
+.container-products .product-wrapper .product-img {
+  width: 328px;
+  height: 410px;
+}
+
+.container-products .product-wrapper .product-info {
+  font-family: OpenSans;
+  padding-top: 3px;
+}
+
+.container-products .product-wrapper .product-info .product-name {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 300;
+  color: #000;
+  letter-spacing: 0.16em;
+}
+
+.container-products .product-wrapper .product-info .stars {
+  padding: 5px 0 5px 0;
+}
+
+.container-products .product-wrapper .product-info .product-price {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 300;
+  color: #000;
+}
+
+.container-reviews {
+  width: 902px;
+  height: 1377px;
+  background: #fff;
+  margin: auto;
+}
+
+.container-reviews .container-title {
+  font-family: OpenSans;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+  margin-left: auto;
+  margin-top: 60px;
+}
+
+.container-reviews .overall-reviews {
+  margin-top: 30px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 290px 320px 300px;
+      grid-template-columns: 290px 320px 300px;
+}
+
+.container-reviews .overall-reviews .product-score {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container-reviews .overall-reviews .product-score .score {
+  font-family: OpenSansB;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 78px;
+}
+
+.container-reviews .overall-reviews .product-score .statistics {
+  margin-left: 13px;
+  margin-top: 25px;
+}
+
+.container-reviews .overall-reviews .product-score .statistics .reviews {
+  margin-top: 8px;
+}
+
+.container-reviews .overall-reviews .stars-rate {
+  margin-top: 20px;
+  font-family: OpenSans;
+  font-size: 14px;
+}
+
+.container-reviews .overall-reviews .stars-rate .progress-space {
+  text-align: center;
+  width: 215px;
+  margin: 8px;
+  height: 8px;
+  background: #f1f1f1;
+  position: relative;
+}
+
+.container-reviews .overall-reviews .stars-rate .progress-fill {
+  background-color: #000;
+  height: 8px;
+  top: 0;
+  position: absolute;
+}
+
+.container-reviews .overall-reviews .review-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.container-reviews .overall-reviews .review-buttons .review-btn {
+  background: #fff;
+  border: 1.8px #000 solid;
+  width: 210px;
+  height: 40px;
+  color: #000;
+  text-decoration: none;
+  line-height: 40px;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 12px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  font-family: OpenSans;
+}
+
+.container-reviews .overall-reviews .review-buttons .review-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */
