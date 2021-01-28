@@ -13,13 +13,23 @@
   src: url("/font/Open_Sans/OpenSans-Bold.ttf");
 }
 
+@font-face {
+  font-family: OpenSansSB;
+  src: url("/font/Open_Sans/OpenSans-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: Oswald;
+  src: url("/font/Oswald/Oswald-Light.ttf");
+}
+
 body {
   background: #fff;
+  font-family: OpenSans;
 }
 
 .container-products {
   width: 1440px;
-  height: 582px;
   background: #fff;
   margin: auto;
 }
@@ -70,21 +80,21 @@ body {
 }
 
 .container-products .product-wrapper .product-img {
-  width: 328px;
-  height: 410px;
+  width: 100%;
+  height: auto;
 }
 
 .container-products .product-wrapper .product-info {
-  font-family: OpenSans;
+  font-family: Oswald;
   padding-top: 3px;
 }
 
 .container-products .product-wrapper .product-info .product-name {
   text-transform: uppercase;
   font-size: 12px;
-  font-weight: 300;
+  font-weight: 400;
   color: #000;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.18em;
 }
 
 .container-products .product-wrapper .product-info .stars {
@@ -95,14 +105,15 @@ body {
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 300;
-  color: #000;
+  color: #353535;
+  letter-spacing: 0.18em;
 }
 
 .container-reviews {
   width: 902px;
-  height: 1377px;
   background: #fff;
   margin: auto;
+  margin-top: 95px;
 }
 
 .container-reviews .container-title {
@@ -113,15 +124,15 @@ body {
   text-align: center;
   text-transform: uppercase;
   margin-left: auto;
-  margin-top: 60px;
 }
 
 .container-reviews .overall-reviews {
-  margin-top: 30px;
+  margin-top: 45px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 290px 320px 300px;
       grid-template-columns: 290px 320px 300px;
+  margin-bottom: 40px;
 }
 
 .container-reviews .overall-reviews .product-score {
@@ -144,6 +155,8 @@ body {
 
 .container-reviews .overall-reviews .product-score .statistics .reviews {
   margin-top: 8px;
+  font-family: OpenSans;
+  font-size: 14px;
 }
 
 .container-reviews .overall-reviews .stars-rate {
@@ -185,7 +198,6 @@ body {
   background: #fff;
   border: 1.8px #000 solid;
   width: 210px;
-  height: 40px;
   color: #000;
   text-decoration: none;
   line-height: 40px;
@@ -200,5 +212,159 @@ body {
 .container-reviews .overall-reviews .review-buttons .review-btn:hover {
   background-color: #000;
   color: #fff;
+}
+
+.container-reviews .user-review {
+  border-top: 1px solid #f1f1f1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 910px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container-reviews .user-review:last-of-type {
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.container-reviews .user-review .review-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container-reviews .user-review .review-content .user-info {
+  width: 230px;
+  padding-top: 24px;
+}
+
+.container-reviews .user-review .review-content .user-info .user-avatar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container-reviews .user-review .review-content .user-info .user-avatar .user-img {
+  background-color: #f1f1f1;
+  font-family: OpenSans;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  border-radius: 30px;
+  line-height: 55px;
+  color: #c4c4c4;
+  font-size: 24px;
+}
+
+.container-reviews .user-review .review-content .user-info .user-avatar .user-name {
+  font-family: OpenSansSB;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 50%;
+  position: relative;
+  top: -10px;
+}
+
+.container-reviews .user-review .review-content .user-text {
+  width: 680px;
+  padding-top: 25px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: OpenSans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: .009px;
+  text-align: left;
+}
+
+.container-reviews .user-review .review-content .user-text .user-title {
+  margin-bottom: 8px;
+  font-family: OpenSansSB;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+  letter-spacing: 0.30px;
+}
+
+.container-reviews .user-review .review-info {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container-reviews .user-review .review-info .review-date {
+  font-family: OpenSans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: #C4C4C4;
+}
+
+.container-reviews .user-review .review-info .review-efficiency {
+  font-family: OpenSans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 167.5%;
+}
+
+.container-reviews .user-review .review-info .review-efficiency .like-icon {
+  margin: 3px 2px 0 4px;
+}
+
+.container-reviews .user-review .review-info .review-efficiency .dis-like-icon {
+  margin: 3px 2px 0 10px;
+}
+
+.container-pagination {
+  width: 902px;
+  background: #fff;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+.container-pagination .pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container-pagination .pagination span {
+  margin: 3px;
+  font-size: 14px;
+  font-family: OpenSans;
+}
+
+.container-pagination .pagination span:last-of-type {
+  text-transform: capitalize;
+  margin-left: 25px;
+}
+
+.container-pagination .pagination span:last-of-type .active {
+  text-decoration: underline;
 }
 /*# sourceMappingURL=style.css.map */

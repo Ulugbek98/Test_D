@@ -1,3 +1,17 @@
+// mixin for 768px width
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+
+// mixin for 375px width
+@mixin for-phone-only {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,13 +28,23 @@
   src: url("/font/Open_Sans/OpenSans-Bold.ttf");
 }
 
+@font-face {
+  font-family: OpenSansSB;
+  src: url("/font/Open_Sans/OpenSans-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: Oswald;
+  src: url("/font/Oswald/Oswald-Light.ttf");
+}
+
 body {
   background: #fff;
+  font-family: OpenSans;
 }
 
 .container-products {
   width: 1440px;
-  height: 582px;
   background: #fff;
   margin: auto;
 
@@ -38,7 +62,7 @@ body {
 
   .product-wrapper {
     display: grid;
-    grid-template-columns: 328px 328px 328px 328px;
+    grid-template-columns:328px 328px 328px 328px;
     // grid-template-columns: repeat(auto-fill, minmax(328px, 1fr));
     grid-template-rows: 1fr;
     grid-auto-flow: row;
@@ -68,20 +92,20 @@ body {
     }
 
     .product-img {
-      width: 328px;
-      height: 410px;
+      width: 100%;
+      height: auto;
     }
 
     .product-info {
-      font-family: OpenSans;
+      font-family: Oswald;
       padding-top: 3px;
 
       .product-name {
         text-transform: uppercase;
         font-size: 12px;
-        font-weight: 300;
+        font-weight: 400;
         color: #000;
-        letter-spacing: 0.16em;
+        letter-spacing: 0.18em;
       }
 
       .stars {
@@ -92,7 +116,8 @@ body {
         text-transform: uppercase;
         font-size: 12px;
         font-weight: 300;
-        color: #000;
+        color: #353535;
+        letter-spacing: 0.18em;
       }
     }
 
@@ -101,9 +126,9 @@ body {
 
 .container-reviews {
   width: 902px;
-  height: 1377px;
   background: #fff;
   margin: auto;
+  margin-top: 95px;
 
   .container-title {
     font-family: OpenSans;
@@ -113,13 +138,13 @@ body {
     text-align: center;
     text-transform: uppercase;
     margin-left: auto;
-    margin-top: 60px;
   }
 
   .overall-reviews {
-    margin-top: 30px;
+    margin-top: 45px;
     display: grid;
     grid-template-columns: 290px 320px 300px;
+    margin-bottom: 40px;
 
     .product-score {
       display: flex;
@@ -137,6 +162,8 @@ body {
 
         .reviews {
           margin-top: 8px;
+          font-family: OpenSans;
+          font-size: 14px;
         }
       }
     }
@@ -172,7 +199,6 @@ body {
         background: #fff;
         border: 1.8px #000 solid;
         width: 210px;
-        height: 40px;
         color: #000;
         text-decoration: none;
         line-height: 40px;
@@ -182,9 +208,147 @@ body {
         letter-spacing: .2em;
         text-transform: uppercase;
         font-family: OpenSans;
-        &:hover{
+
+        &:hover {
           background-color: #000;
           color: #fff;
+        }
+      }
+    }
+  }
+
+  .user-review {
+    border-top: 1px solid #f1f1f1;
+    display: flex;
+    width: 910px;
+    flex-direction: column;
+
+    &:last-of-type {
+      border-bottom: 1px solid #f1f1f1;
+    }
+
+
+    .review-content {
+      display: flex;
+
+      .user-info {
+        width: 230px;
+        padding-top: 24px;
+
+        .user-avatar {
+          display: flex;
+          align-items: center;
+
+          .user-img {
+            background-color: #f1f1f1;
+            font-family: OpenSans;
+            margin-right: 16px;
+            margin-bottom: 16px;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            border-radius: 30px;
+            line-height: 55px;
+            color: #c4c4c4;
+            font-size: 24px;
+          }
+
+          .user-name {
+            font-family: OpenSansSB;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 50%;
+            position: relative;
+            top: -10px;
+          }
+        }
+
+      }
+
+      .user-text {
+        width: 680px;
+        padding-top: 25px;
+        align-items: center;
+        font-family: OpenSans;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 23px;
+        letter-spacing: .009px;
+        text-align: left;
+
+        .user-title {
+          margin-bottom: 8px;
+          font-family: OpenSansSB;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 23px;
+          letter-spacing: 0em;
+          text-align: left;
+          letter-spacing: 0.30px;
+        }
+      }
+    }
+
+    .review-info {
+      margin-top: 24px;
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+
+      .review-date {
+        font-family: OpenSans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        color: #C4C4C4;
+      }
+
+      .review-efficiency {
+        font-family: OpenSans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 167.5%;
+
+        .like-icon {
+          margin: 3px 2px 0 4px;
+        }
+
+        .dis-like-icon {
+          margin: 3px 2px 0 10px;
+        }
+      }
+    }
+  }
+
+
+}
+
+.container-pagination {
+  width: 902px;
+  background: #fff;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 80px;
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+
+    span {
+      margin: 3px;
+      font-size: 14px;
+      font-family: OpenSans;
+
+      &:last-of-type {
+        text-transform: capitalize;
+        margin-left: 25px;
+
+        .active {
+          text-decoration: underline;
         }
       }
     }
