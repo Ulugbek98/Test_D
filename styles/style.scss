@@ -164,6 +164,10 @@ body {
 
     }
 
+    @include for-phone {
+      margin-bottom: 60px;
+    }
+
     .product-score {
       display: flex;
 
@@ -282,6 +286,10 @@ body {
     width: 768px;
   }
 
+  @include for-phone {
+    width: 340px;
+  }
+
   .user-review {
     border-top: 1px solid #f1f1f1;
     display: flex;
@@ -294,12 +302,20 @@ body {
       margin-right: auto;
     }
 
+    @include for-phone {
+      width: 340px;
+    }
+
     &:last-of-type {
       border-bottom: 1px solid #f1f1f1;
     }
 
     .review-content {
       display: flex;
+
+      @include for-phone {
+        flex-direction: column;
+      }
 
       .user-info {
         width: 230px;
@@ -330,15 +346,23 @@ body {
             line-height: 50%;
             position: relative;
             top: -10px;
+
+            @include for-phone {
+              font-size: 14px;
+            }
           }
         }
 
+        .stars {
+          text-align: center;
+          margin-top: -35px;
+          margin-left: 15px;
+        }
       }
 
       .user-text {
         width: 680px;
         padding-top: 25px;
-        align-items: center;
         font-family: OpenSans;
         font-size: 14px;
         font-style: normal;
@@ -350,6 +374,14 @@ body {
         @include for-tablet {
           font-size: 16px;
         }
+
+        @include for-phone {
+          width: 340px;
+          font-size: 12px;
+          line-height: 19px;
+          padding-top: 5px;
+        }
+
         .user-title {
           margin-bottom: 8px;
           font-family: OpenSansSB;
@@ -363,6 +395,10 @@ body {
 
           @include for-tablet {
             font-size: 16px;
+          }
+
+          @include for-phone {
+            font-size: 12px;
           }
         }
       }
@@ -382,6 +418,9 @@ body {
         line-height: 24px;
         color: #C4C4C4;
 
+        @include for-phone {
+          font-size: 12px;
+        }
       }
 
       .review-efficiency {
@@ -391,8 +430,17 @@ body {
         font-size: 14px;
         line-height: 167.5%;
 
+        @include for-phone {
+          font-size: 12px;
+        }
+
         .like-icon {
           margin: 3px 2px 0 4px;
+
+          @include for-phone {
+            margin: 3px 2px 0 8px;
+
+          }
         }
 
         .dis-like-icon {
@@ -414,6 +462,10 @@ body {
 
   @include for-tablet {
     width: 768px;
+  }
+
+  @include for-phone {
+    width: 340px;
   }
 
   .pagination {
