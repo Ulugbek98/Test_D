@@ -48,6 +48,14 @@ body {
   background: #fff;
   margin: auto;
 
+  @include for-tablet {
+    width: 740px;
+  }
+
+  @include for-phone {
+    width: 375px;
+  }
+
   .container-title {
     font-family: OpenSans;
     font-size: 28px;
@@ -58,6 +66,17 @@ body {
     margin-bottom: 42px;
     margin-left: 40px;
     margin-top: 80px;
+
+    @include for-tablet {
+      margin-left: 0;
+    }
+
+    @include for-phone {
+      font-size: 14px;
+      margin-top: 40px;
+      margin-left: 16px;
+      margin-bottom: 16px;
+    }
   }
 
   .product-wrapper {
@@ -70,10 +89,35 @@ body {
     width: 1360px;
     margin-left: 40px;
 
+    @include for-tablet {
+      grid-template-columns: 368px 368px 368px 368px;
+      margin-left: 0px;
+      grid-gap: 10px;
+
+    }
+
+    @include for-phone {
+      grid-template-columns: 167px 167px 167px 167px;
+      width: 320px;
+      grid-gap: 8px;
+      margin-left: 16px;
+
+    }
+
 
     .product-link {
       text-decoration: none;
       position: relative;
+
+      .img_product {
+    @include for-tablet {
+      width: 368px;
+
+    }
+        @include for-phone {
+          width: 167px;
+        }
+      }
     }
 
     .shipping-type {
@@ -132,6 +176,12 @@ body {
 
   @include for-tablet {
     width: 343px;
+    margin-top: 60px;
+
+  }
+
+  @include for-phone {
+    margin-top: 40px;
   }
 
   .container-title {
@@ -450,8 +500,6 @@ body {
     }
   }
 }
-
-
 
 .container-pagination {
   width: 902px;
