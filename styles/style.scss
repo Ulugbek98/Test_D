@@ -1,12 +1,12 @@
 // mixin for 768px width
-@mixin for-tablet{
-  @media (min-width: 600px) {
+@mixin for-tablet {
+  @media (max-width: 768px) {
     @content;
   }
 }
 
 // mixin for 375px width
-@mixin for-phone{
+@mixin for-phone {
   @media (max-width: 375px) {
     @content;
   }
@@ -132,7 +132,6 @@ body {
 
   @include for-tablet {
     width: 343px;
-
   }
 
   .container-title {
@@ -143,8 +142,10 @@ body {
     text-align: center;
     text-transform: uppercase;
     margin-left: auto;
+
     @include for-tablet {
       font-size: 24px;
+      font-weight: 700;
     }
   }
 
@@ -153,15 +154,26 @@ body {
     display: grid;
     grid-template-columns: 290px 320px 300px;
     margin-bottom: 40px;
+
     @include for-tablet {
       grid-template-columns: 1fr;
       grid-template-rows: 133px 140px 95px;
+      margin-bottom: 150px;
+      width: 343px;
+      margin-top: 15px;
+
     }
+
     .product-score {
       display: flex;
+
       @include for-tablet {
         flex-direction: column;
+        align-items: center;
+        width: 343px;
+
       }
+
       .score {
         font-family: OpenSansB;
         font-weight: 400;
@@ -173,10 +185,25 @@ body {
         margin-left: 13px;
         margin-top: 25px;
 
+        @include for-tablet {
+          margin-left: 0px;
+          margin-top: 10px;
+          width: 343px;
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+        }
+
         .reviews {
           margin-top: 8px;
           font-family: OpenSans;
           font-size: 14px;
+
+          @include for-tablet {
+            text-align: center;
+            width: 343px;
+
+          }
         }
       }
     }
@@ -185,6 +212,11 @@ body {
       margin-top: 20px;
       font-family: OpenSans;
       font-size: 14px;
+
+      @include for-tablet {
+        display: flex;
+        margin-left: 20px;
+      }
 
       .progress-space {
         text-align: center;
@@ -208,6 +240,11 @@ body {
       flex-direction: column;
       align-items: flex-end;
 
+      @include for-tablet {
+        align-items: center;
+        margin-top: 30px;
+      }
+
       .review-btn {
         background: #fff;
         border: 1.8px #000 solid;
@@ -226,8 +263,23 @@ body {
           background-color: #000;
           color: #fff;
         }
+
+        @include for-tablet {
+          width: 100%;
+          font-weight: 700;
+        }
       }
     }
+  }
+}
+
+.reviews {
+  width: 902px;
+  background: #fff;
+  margin: auto;
+
+  @include for-tablet {
+    width: 768px;
   }
 
   .user-review {
@@ -236,10 +288,15 @@ body {
     width: 910px;
     flex-direction: column;
 
+    @include for-tablet {
+      width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     &:last-of-type {
       border-bottom: 1px solid #f1f1f1;
     }
-
 
     .review-content {
       display: flex;
@@ -290,6 +347,9 @@ body {
         letter-spacing: .009px;
         text-align: left;
 
+        @include for-tablet {
+          font-size: 16px;
+        }
         .user-title {
           margin-bottom: 8px;
           font-family: OpenSansSB;
@@ -300,6 +360,10 @@ body {
           letter-spacing: 0em;
           text-align: left;
           letter-spacing: 0.30px;
+
+          @include for-tablet {
+            font-size: 16px;
+          }
         }
       }
     }
@@ -317,6 +381,7 @@ body {
         font-size: 14px;
         line-height: 24px;
         color: #C4C4C4;
+
       }
 
       .review-efficiency {
@@ -336,9 +401,9 @@ body {
       }
     }
   }
-
-
 }
+
+
 
 .container-pagination {
   width: 902px;
@@ -346,6 +411,10 @@ body {
   margin: auto;
   margin-top: 40px;
   margin-bottom: 80px;
+
+  @include for-tablet {
+    width: 768px;
+  }
 
   .pagination {
     display: flex;
