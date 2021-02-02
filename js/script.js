@@ -16,7 +16,7 @@ else{
   itemWidth =itemWidth +10;
 }
 const movePosition = slidesToScroll * itemWidth;
-console.log(container.clientWidth)
+
 items.forEach((item) => {
     item.style.minWidth = `${itemWidth}px`
 })
