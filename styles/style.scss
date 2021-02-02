@@ -1,12 +1,12 @@
 // mixin for 768px width
-@mixin for-tablet-portrait-up {
+@mixin for-tablet{
   @media (min-width: 600px) {
     @content;
   }
 }
 
 // mixin for 375px width
-@mixin for-phone-only {
+@mixin for-phone{
   @media (max-width: 375px) {
     @content;
   }
@@ -62,7 +62,7 @@ body {
 
   .product-wrapper {
     display: grid;
-    grid-template-columns:328px 328px 328px 328px;
+    grid-template-columns: 328px 328px 328px 328px;
     // grid-template-columns: repeat(auto-fill, minmax(328px, 1fr));
     grid-template-rows: 1fr;
     grid-auto-flow: row;
@@ -130,6 +130,11 @@ body {
   margin: auto;
   margin-top: 95px;
 
+  @include for-tablet {
+    width: 343px;
+
+  }
+
   .container-title {
     font-family: OpenSans;
     font-size: 28px;
@@ -138,6 +143,9 @@ body {
     text-align: center;
     text-transform: uppercase;
     margin-left: auto;
+    @include for-tablet {
+      font-size: 24px;
+    }
   }
 
   .overall-reviews {
@@ -145,10 +153,15 @@ body {
     display: grid;
     grid-template-columns: 290px 320px 300px;
     margin-bottom: 40px;
-
+    @include for-tablet {
+      grid-template-columns: 1fr;
+      grid-template-rows: 133px 140px 95px;
+    }
     .product-score {
       display: flex;
-
+      @include for-tablet {
+        flex-direction: column;
+      }
       .score {
         font-family: OpenSansB;
         font-weight: 400;
