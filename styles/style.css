@@ -5,22 +5,22 @@
 
 @font-face {
   font-family: OpenSans;
-  src: url("/font/Open_Sans/OpenSans-Regular.ttf");
+  src: url("./font/Open_Sans/OpenSans-Regular.ttf");
 }
 
 @font-face {
   font-family: OpenSansB;
-  src: url("/font/Open_Sans/OpenSans-Bold.ttf");
+  src: url("./font/Open_Sans/OpenSans-Bold.ttf");
 }
 
 @font-face {
   font-family: OpenSansSB;
-  src: url("/font/Open_Sans/OpenSans-SemiBold.ttf");
+  src: url("./font/Open_Sans/OpenSans-SemiBold.ttf");
 }
 
 @font-face {
   font-family: Oswald;
-  src: url("/font/Oswald/Oswald-Light.ttf");
+  src: url("./font/Oswald/Oswald-Light.ttf");
 }
 
 body {
