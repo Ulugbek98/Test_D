@@ -47,6 +47,7 @@ body {
   width: 1440px;
   background: #fff;
   margin: auto;
+  position: relative;
 
   @include for-tablet {
     width: 740px;
@@ -79,93 +80,140 @@ body {
     }
   }
 
-  .product-wrapper {
-    display: grid;
-    grid-template-columns: 328px 328px 328px 328px;
-    // grid-template-columns: repeat(auto-fill, minmax(328px, 1fr));
-    grid-template-rows: 1fr;
-    grid-auto-flow: row;
-    grid-gap: 16px;
-    width: 1360px;
-    margin-left: 40px;
+  .wrapper {
 
-    @include for-tablet {
-      grid-template-columns: 368px 368px 368px 368px;
-      margin-left: 0px;
-      grid-gap: 10px;
+    .slider-container {
 
+      @include for-tablet {
+        width: 740px;
+        overflow: hidden;
+      }
+
+      @include for-phone {
+        width: 375px;
+        overflow: hidden;
+      }
     }
 
-    @include for-phone {
-      grid-template-columns: 167px 167px 167px 167px;
-      width: 320px;
-      grid-gap: 8px;
-      margin-left: 16px;
+    .slider-track {
+      transition: 0.3s;
+      display: grid;
+      grid-template-columns: 328px 328px 328px 328px;
+      grid-template-rows: 1fr;
+      grid-auto-flow: row;
+      grid-gap: 16px;
+      width: 1360px;
+      margin-left: 40px;
 
-    }
+      @include for-tablet {
+        grid-template-columns: 368px 368px 368px 368px;
+        margin-left: 0px;
+        grid-gap: 10px;
+
+      }
+
+      @include for-phone {
+        grid-template-columns: 180px 180px 180px 180px;
+        width: 320px;
+        grid-gap: 2px;
+        margin-left: 16px;
+      }
 
 
-    .product-link {
-      text-decoration: none;
-      position: relative;
+      .product-link {
+        text-decoration: none;
+        position: relative;
 
-      .img_product {
-    @include for-tablet {
-      width: 368px;
+        .img_product {
+          @include for-tablet {
+            width: 368px;
+          }
 
-    }
-        @include for-phone {
-          width: 167px;
+          @include for-phone {
+            width: 167px;
+          }
         }
       }
-    }
 
-    .shipping-type {
-      font-family: OpenSans;
-      font-size: 12px;
-      font-weight: 400;
-      position: absolute;
-      background-color: #fff;
-      color: #000;
-      left: 0;
-      padding: 4px 7px 4px 8px;
-      margin-top: 8px;
-      margin-left: 8px;
-      text-align: center;
-      line-height: 20px;
-    }
-
-    .product-img {
-      width: 100%;
-      height: auto;
-    }
-
-    .product-info {
-      font-family: Oswald;
-      padding-top: 3px;
-
-      .product-name {
-        text-transform: uppercase;
+      .shipping-type {
+        font-family: OpenSans;
         font-size: 12px;
         font-weight: 400;
+        position: absolute;
+        background-color: #fff;
         color: #000;
-        letter-spacing: 0.18em;
+        left: 0;
+        padding: 4px 7px 4px 8px;
+        margin-top: 8px;
+        margin-left: 8px;
+        text-align: center;
+        line-height: 20px;
       }
 
-      .stars {
-        padding: 5px 0 5px 0
+      .product-img {
+        width: 100%;
+        height: auto;
       }
 
-      .product-price {
-        text-transform: uppercase;
-        font-size: 12px;
-        font-weight: 300;
-        color: #353535;
-        letter-spacing: 0.18em;
+      .product-info {
+        font-family: Oswald;
+        padding-top: 3px;
+
+        .product-name {
+          text-transform: uppercase;
+          font-size: 12px;
+          font-weight: 400;
+          color: #000;
+          letter-spacing: 0.18em;
+        }
+
+        .stars {
+          padding: 5px 0 5px 0
+        }
+
+        .product-price {
+          text-transform: uppercase;
+          font-size: 12px;
+          font-weight: 300;
+          color: #353535;
+          letter-spacing: 0.18em;
+        }
+      }
+
+    }
+
+    .slider-buttons {
+      display: none;
+
+      @include for-tablet {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        top: -340px;
+        font-size: 20px;
+        margin-left: -6px;
+        margin-right: -6px;
+      }
+
+      @include for-phone {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        top: -200px;
+        font-size: 15px;
+        width: 370px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      a {
+        text-decoration: none;
+        color: rgb(51, 51, 51);
       }
     }
 
   }
+
 }
 
 .container-reviews {
@@ -271,6 +319,7 @@ body {
         display: flex;
         margin-left: 20px;
       }
+
 
       .progress-space {
         text-align: center;
@@ -404,9 +453,20 @@ body {
         }
 
         .stars {
-          text-align: center;
-          margin-top: -35px;
-          margin-left: 15px;
+          @include for-tablet {
+            margin-left: 60px;
+            margin-top: -35px;
+            text-align: center;
+
+          }
+
+          @include for-phone {
+            margin-left: 15px;
+            margin-top: -35px;
+            text-align: center;
+
+          }
+
         }
       }
 
